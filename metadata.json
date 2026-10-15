@@ -1,0 +1,6 @@
+{
+  "name": "B.Tech Attendance Tracker",
+  "description": "Smart attendance tracking, 75% shortage alert engine, bunk and catch-up calculator, weekly timetable manager, and lecture push alerts for B.Tech students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
