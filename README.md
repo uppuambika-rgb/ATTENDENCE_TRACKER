@@ -107,6 +107,41 @@
 
 ---
 
+## 🌐 Deploy to Render (render.com)
+
+Render allows you to deploy this app for **free**.
+
+### Recommended Method: Static Site (Fastest & Free)
+
+1. Go to [dashboard.render.com](https://dashboard.render.com/) and click **New +** > **Static Site**.
+2. Connect your GitHub repository containing this code.
+3. Configure the deployment settings:
+   - **Name**: `attendx-attendance-tracker` (or any name you choose)
+   - **Branch**: `main` (or your active branch)
+   - **Root Directory**: `.` *(leave empty or enter `.`)*
+   - **Build Command**: `npm install --legacy-peer-deps && npm run build`
+   - **Publish Directory**: `dist`
+4. **Configure Single Page Application (SPA) Rewrite Rule**:
+   - Scroll down to the **Redirects/Rewrites** section.
+   - Click **Add Rule**:
+     - **Type**: `Rewrite`
+     - **Source**: `/*`
+     - **Destination**: `/index.html`
+   - This ensures all client-side routes reload cleanly without 404 errors.
+5. Click **Create Static Site**.
+
+---
+
+### Alternative Method: Web Service (Node.js)
+
+If deploying as a Node.js Web Service on Render:
+- **Environment**: `Node`
+- **Root Directory**: `.` *(leave empty or enter `.`)*
+- **Build Command**: `npm install --legacy-peer-deps && npm run build`
+- **Start Command**: `npm start` *(or `npx vite preview --port $PORT --host 0.0.0.0`)*
+
+---
+
 ## ☕ Running the Java Spring Boot Backend (Optional)
 
 If you would like to run the standalone Spring Boot backend:
